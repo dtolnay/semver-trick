@@ -132,7 +132,7 @@ extern crate libc; // this pulls in 0.3 as per Cargo.toml
 
 pub use libc::c_void;
 
-pub const EVFILT_AIO: uint32_t = 2;
+pub const EVFILT_AIO: int32_t = 2;
 ```
 
 This way we avoid the problem of having two `c_void` types that look the same
