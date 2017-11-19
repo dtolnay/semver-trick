@@ -168,15 +168,13 @@ Fundamentally the semver trick is beneficial when a crate needs to break a
 rarely used API while leaving widely used APIs unchanged, or when a crate wants
 to shuffle types around in its module hierarchy.
 
-Most other types of breakage are not helped by this trick. A concrete example
-would be adding a new method to a widely used trait in your library.
+Most other types of breakage are not helped by this trick, including the
+following concrete examples:
 
-## Caveats
-
-* Not every breaking change may be mollified by this trick. See the [Limitations section](#limitations) above.
-* Semver may not only be about the code, but also about dependencies. Major version bumps of public dependencies may imply major bumps of the library itself, which contradicts this trick.
-* If rustc or libstd required minimum version is bumped in "0.3", it also starts being a requirement for "0.2", which may not what "0.2" users expect.
-* The trick is not very compatible with offeting Long Term Support which may assume just backported fixes, not major changes camouflaged as minor changes by the trick.
+- Adding a new method to a widely used trait,
+- Bumping a major version of a public dependency that is not itself using the
+  semver trick,
+- Raising the minimum supported version of rustc.
 
 ## Other tricks
 
