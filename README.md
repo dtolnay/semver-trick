@@ -171,10 +171,12 @@ to shuffle types around in its module hierarchy.
 Most other types of breakage are not helped by this trick, including the
 following concrete examples:
 
-- Adding a new method to a widely used trait,
+- Adding a new method to a widely used trait that is not [sealed],
 - Bumping a major version of a public dependency that is not itself using the
   semver trick,
 - Raising the minimum supported version of rustc.
+
+[sealed]: https://rust-lang-nursery.github.io/api-guidelines/future-proofing.html#c-sealed
 
 ## Other tricks
 
