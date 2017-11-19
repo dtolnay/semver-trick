@@ -181,10 +181,17 @@ following concrete examples:
 ## Other tricks
 
 Where the semver trick is not applicable, it can be possible to mitigate the
-impact of breaking changes in other ways. The [Serde legacy shims] are one
-example of this.
+impact of breaking changes in other ways.
+
+- The [Serde legacy shims] demonstrate a technique for allowing downstream
+  libraries to provide trait impls simultaneously across multiple incompatible
+  versions of a library.
+- The [Future Proofing] chapter of the Rust API guidelines gives some
+  suggestions for designing APIs that do not require breaking changes in the
+  first place.
 
 [Serde legacy shims]: https://github.com/serde-rs/legacy
+[Future Proofing]: https://rust-lang-nursery.github.io/api-guidelines/future-proofing.html
 
 ## License
 
