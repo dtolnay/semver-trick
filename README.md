@@ -31,7 +31,7 @@ pub const EVFILT_AIO: int32_t = 2;
 ```
 
 The `c_void` type becomes widely used as hundreds of libraries want to expose
-functions that are ABI-compatible with C's `void *` type. Meanwhile the
+functions that are API-compatible with C's `void *` type. Meanwhile the
 `EVFILT_AIO` constant is less commonly used and never in the public API of
 downstream crates.
 
