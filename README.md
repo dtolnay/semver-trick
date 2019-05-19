@@ -193,19 +193,26 @@ impact of breaking changes in other ways.
 [Serde legacy shims]: https://github.com/serde-rs/legacy
 [Future Proofing]: https://rust-lang-nursery.github.io/api-guidelines/future-proofing.html
 
-## License
+<br>
 
+#### License
+
+<sup>
 To the extent that it constitutes copyrightable work, the idea of depending on a
-future version of the same library is licensed under the CC0 1.0
-Universal license ([LICENSE-CC0](LICENSE-CC0)) and may be used without
-attribution.
+future version of the same library is licensed under the
+CC0 1.0 Universal license (<a href="LICENSE-CC0">LICENSE-CC0</a>)
+and may be used without attribution. This document and the accompanying
+<code>semver-trick</code> example crate are licensed under either of
+Apache License, Version 2.0 (<a href="LICENSE-APACHE">LICENSE-APACHE</a>)
+or
+MIT license (<a href="LICENSE-MIT">LICENSE-MIT</a>)
+at your option.
+</sup>
 
-This document and the accompanying `semver-trick` example crate are licensed
-under either of Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE))
-or MIT license ([LICENSE-MIT](LICENSE-MIT)) at your option.
+<br>
 
-### Contribution
-
+<sub>
 Unless you explicitly state otherwise, any contribution intentionally submitted
 for inclusion in this codebase by you, as defined in the Apache-2.0 license,
 shall be dual licensed as above, without any additional terms or conditions.
+</sub>
