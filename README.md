@@ -5,6 +5,8 @@ without requiring a coordinated upgrade across its downstream dependency
 graph.** The trick is built around having one version of your library declare a
 dependency on a newer version of the same library.
 
+<br>
+
 ## Illustrative example
 
 The Rust library ecosystem has a history of traumatic library upgrades. The
@@ -65,6 +67,8 @@ would be broken, and this needs to be reflected in the semver version of the
 
 Here is where things go wrong.
 
+<br>
+
 ## Coordinated upgrades
 
 Suppose we make the fix and publish it as a breaking change.
@@ -98,6 +102,8 @@ found themselves coordinating an upgrade of 52 libraries over a period of three
 months ([servo/servo#8608]).
 
 [servo/servo#8608]: https://github.com/servo/servo/issues/8608
+
+<br>
 
 ## The trick
 
@@ -143,6 +149,8 @@ The libcpocalypse scenario is averted because users of `libc` can upgrade from
 0.2 to 0.3 at their leisure, in any order, without needing to bump their own
 semver major version.
 
+<br>
+
 ## Advanced trickery
 
 With some care and creativity, the technique above can be generalized to lots of
@@ -159,6 +167,8 @@ in this repo demonstrates some types of changes that can be accomodated.
 [`semver_trick::Added`]: https://docs.rs/semver-trick/0.3.0/semver_trick/struct.Added.html
 [`semver_trick::before::Moved`]: https://docs.rs/semver-trick/0.2.0/semver_trick/before/struct.Moved.html
 [`semver_trick::after::Moved`]: https://docs.rs/semver-trick/0.3.0/semver_trick/after/struct.Moved.html
+
+<br>
 
 ## Limitations
 
@@ -177,6 +187,8 @@ following concrete examples:
 - Raising the minimum supported version of rustc.
 
 [sealed]: https://rust-lang-nursery.github.io/api-guidelines/future-proofing.html#c-sealed
+
+<br>
 
 ## Other tricks
 
