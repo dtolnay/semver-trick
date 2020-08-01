@@ -10,9 +10,9 @@ dependency on a newer version of the same library.
 ## Illustrative example
 
 The Rust library ecosystem has a history of traumatic library upgrades. The
-upgrade of [`libc`] from 0.1 to 0.2 is known as the "libcpocalypse". Another
-frequent culprit was pre-1.0 [Serde], with the upgrades from 0.7 to 0.8 to 0.9
-to 1.0 requiring ecosystem-wide effort.
+upgrade of [`libc`] from 0.1 to 0.2 in 2015 was known as the "libcpocalypse".
+Another frequent culprit was pre-1.0 [Serde], with the upgrades from 0.7 to 0.8
+to 0.9 to 1.0 requiring ecosystem-wide effort.
 
 [`libc`]: https://crates.io/crates/libc
 [Serde]: https://serde.rs/
