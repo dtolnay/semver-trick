@@ -29,7 +29,7 @@ NetBSD.
 
 pub type c_void = /* it's complicated */;
 
-pub const EVFILT_AIO: int32_t = 2;
+pub const EVFILT_AIO: i32 = 2;
 ```
 
 The `c_void` type becomes widely used as hundreds of libraries want to expose
@@ -81,7 +81,7 @@ Suppose we make the fix and publish it as a breaking change.
 
 pub type c_void = /* it's complicated */;
 
-pub const EVFILT_AIO: uint32_t = 2;
+pub const EVFILT_AIO: u32 = 2;
 ```
 
 Despite the fact that the definition of `c_void` has not changed, technically
@@ -140,7 +140,7 @@ And in lib.rs:
 
 pub use libc::c_void;  // reexport from libc 0.3, as per Cargo.toml
 
-pub const EVFILT_AIO: int32_t = 2;
+pub const EVFILT_AIO: i32 = 2;
 ```
 
 This way we avoid the problem of having two `c_void` types that look the same
