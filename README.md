@@ -41,16 +41,19 @@ downstream crates.
 extern {
     // Usable from C as:
     //
-    //    void qsort(void *base,
-    //               size_t nitems,
-    //               size_t size,
-    //               int (*compar)(const void *, const void*));
+    //    void qsort(
+    //        void *base,
+    //        size_t nitems,
+    //        size_t size,
+    //        int (*compar)(const void *, const void*));
     //
     // The `c_void` type is now part of the public API of this crate.
-    pub fn qsort(base: *mut c_void,
-                 nitems: usize,
-                 size: usize,
-                 compar: Option<unsafe extern fn(*const c_void, *const c_void) -> c_int>);
+    pub fn qsort(
+        base: *mut c_void,
+        nitems: usize,
+        size: usize,
+        compar: Option<unsafe extern fn(*const c_void, *const c_void) -> c_int>,
+    );
 }
 ```
 
