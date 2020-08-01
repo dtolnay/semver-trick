@@ -84,7 +84,8 @@ pub const EVFILT_AIO: uint32_t = 2;
 Despite the fact that the definition of `c_void` has not changed, technically
 the `c_void` from libc 0.2 and the `c_void` from libc 0.3 are different types.
 In Rust (as in C, for that matter), two structs are not interchangeable just
-because they look the same.
+because they have the same fields; passing one to a function that is declared to
+take the other is a compile error.
 
 That means if crate A depends on crate B which depends on `libc`, and B uses
 `c_void` in the public API of some function called by A, then A cannot upgrade
