@@ -138,9 +138,7 @@ And in lib.rs:
 ```rust
 // libc 0.2.1
 
-extern crate libc; // this pulls in 0.3 as per Cargo.toml
-
-pub use libc::c_void;
+pub use libc::c_void;  // reexport from libc 0.3, as per Cargo.toml
 
 pub const EVFILT_AIO: int32_t = 2;
 ```
