@@ -38,7 +38,7 @@ functions that are ABI-compatible with C's `void *` type. Meanwhile the
 downstream crates.
 
 ```rust
-extern {
+extern "C" {
     // Usable from C as:
     //
     //    void qsort(
