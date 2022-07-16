@@ -2,6 +2,7 @@
 name = "semver-trick"
 version = "0.2.1"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
+edition = "2021"
 license = "MIT OR Apache-2.0"
 description = "Example of applying the semver trick to prevent a difficult coordinated upgrade"
 repository = "https://github.com/dtolnay/semver-trick"

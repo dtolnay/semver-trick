@@ -1,5 +1,3 @@
-extern crate semver_trick;
-
 pub use semver_trick::Unchanged;
 
 /// This type is not widely used. It will be removed in 0.3.0.
