@@ -157,7 +157,7 @@ semver major version.
 
 With some care and creativity, the technique above can be generalized to lots of
 different breaking change situations. The `semver-trick` example crate included
-in this repo demonstrates some types of changes that can be accomodated.
+in this repo demonstrates some types of changes that can be accommodated.
 
 - [`semver_trick::Unchanged`] is interchangeable across 0.2 and 0.3.
 - [`semver_trick::Removed`] exists in 0.2 but not 0.3.
